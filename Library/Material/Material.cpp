@@ -152,7 +152,7 @@ float Dis::avg(uint8_t readings, uint8_t seconds) {
 	return _total / _read;
 }
 
-void Mission::Mission(uint8_t servo, uint8_t screw, uint8_t fsrP) {
+Mission::Mission(uint8_t servo, uint8_t screw, uint8_t fsrP) {
 	_screw = screw;
 	_servo = servo;
 	_fsr = fsrP;
@@ -166,7 +166,7 @@ int Mission::fsr() {
 }
 
 int Mission::avgFsr() {
-
+	analogRead()
 }
 
 void Mission::screwOn() {
@@ -175,5 +175,13 @@ void Mission::screwOn() {
 
 void Mission::screwOff() {
 	digitalWrite(_screw, LOW);
+}
+
+void Mission::servoDown() {
+
+}
+
+void Mission::servoUp() {
+
 }
 
