@@ -4,7 +4,9 @@
 
 **Written by Avi Rosenberg**
 
-**How to import into arduino:**First, go to the Github page and download the code. Then go into the zip file and copy out the “Material” folder. Re-zip this into a zip file also called “Material.” Then go into the arduino IDE and under the sketch tab at the top go to “include library” and then “Add .ZIP library.” Select the zip file you just made and it will import it (say yes to overwrite if bringing in a new version). Then make sure you’ve used `#include <Material.h> `and`  #include <stdint.h>  `at the top of the program you’re writing. 
+**How to import into arduino:** 
+
+First, go to the Github page and navigate to the releases tab to download the current library version. Then go into the arduino IDE and under the sketch tab at the top go to “include library” and then “Add .ZIP library.” Select the zip file you just made and it will import it (say yes to overwrite if bringing in a new version). Then make sure you’ve used `#include <Material.h> `and`  #include <stdint.h>  `at the top of the program you’re writing. 
 
 Classes: 
 
