@@ -162,11 +162,17 @@ Mission::Mission(uint8_t servo, uint8_t screw, uint8_t fsrP) {
 }
 
 int Mission::fsr() {
-	analogRead(_fsr);
+	return analogRead(_fsr);
 }
 
-int Mission::avgFsr() {
-	analogRead()
+int Mission::avgFsr(uint8_t seconds) {
+	int _total = 0;
+	_sec = seconds;
+	for (int i = 0; i < (_sec * 10); i++) {
+		_total = _total + analogRead(_fsr);
+		delay(100);
+	}
+	return _total / (_sec*10);
 }
 
 void Mission::screwOn() {

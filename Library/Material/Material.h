@@ -59,7 +59,7 @@ class Mission {
 public:
 	Mission(uint8_t servo, uint8_t screw, uint8_t fsrP);
 	int fsr();
-	int avgFsr();
+	int avgFsr(uint8_t seconds);
 	void screwOn();
 	void screwOff();
 	void servoUp();
@@ -68,5 +68,7 @@ private:
 	uint8_t _servo;
 	uint8_t _screw;
 	uint8_t _fsr;
+	uint8_t _sec;
+	int _total;
 };
 #endif
