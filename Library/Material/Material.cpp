@@ -176,11 +176,11 @@ int Mission::avgFsr(uint8_t seconds) {
 }
 
 void Mission::screwOn() {
-	digitalWrite(_screw, HIGH);
+	digitalWrite(_screw, LOW);
 }
 
 void Mission::screwOff() {
-	digitalWrite(_screw, LOW);
+	digitalWrite(_screw, HIGH);
 }
 
 void Mission::servoDown() {
