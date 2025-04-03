@@ -183,11 +183,20 @@ void Mission::screwOff() {
 	digitalWrite(_screw, HIGH);
 }
 
+//WIRES FACING UP
 void Mission::servoDown() {
-
+	pinMode(_servo, OUTPUT);
+	digitalWrite(_servo, HIGH);
+	delayMicroseconds(2500);
+	digitalWrite(_servo, LOW);
+	delayMicroseconds(20000);
 }
 
 void Mission::servoUp() {
-
+	pinMode(_servo, OUTPUT);
+	digitalWrite(_servo, HIGH);
+	delayMicroseconds(1500);
+	digitalWrite(_servo, LOW);
+	delayMicroseconds(20000);
 }
 
