@@ -26,7 +26,7 @@ void Move::backward(uint8_t speed) {
 	digitalWrite(_left24, LOW);
 	digitalWrite(_right13, HIGH);
 	digitalWrite(_right24, LOW);
-	digitalWrite(_pwm, _speed);
+	analogWrite(_pwm, _speed);
 }
 
 void Move::forward(uint8_t speed) {
@@ -35,7 +35,7 @@ void Move::forward(uint8_t speed) {
 	digitalWrite(_left24, HIGH);
 	digitalWrite(_right13, LOW);
 	digitalWrite(_right24, HIGH);
-	digitalWrite(_pwm, _speed)
+	analogWrite(_pwm, _speed)
 }
 
 void Move::off() {
