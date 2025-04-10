@@ -14,6 +14,7 @@ Move::Move(uint8_t left13, uint8_t left24, uint8_t right13, uint8_t right24, uin
 	_left24 = left24;
 	_right13 = right13;
 	_right24 = right24;
+	_pwm = pwm;
 	pinMode(left13, OUTPUT);
 	pinMode(left24, OUTPUT);
 	pinMode(right13, OUTPUT);
@@ -25,7 +26,7 @@ void Move::backward(uint8_t speed) {
 	digitalWrite(_left24, LOW);
 	digitalWrite(_right13, HIGH);
 	digitalWrite(_right24, LOW);
-	digitalWrite(_pwm, speed);
+	digitalWrite(_pwm, _speed);
 }
 
 void Move::forward(uint8_t speed) {
@@ -34,7 +35,7 @@ void Move::forward(uint8_t speed) {
 	digitalWrite(_left24, HIGH);
 	digitalWrite(_right13, LOW);
 	digitalWrite(_right24, HIGH);
-	digitalWrite(_pwm, speed)
+	digitalWrite(_pwm, _speed)
 }
 
 void Move::off() {
