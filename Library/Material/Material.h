@@ -14,7 +14,7 @@ class Move {
 public:
 	Move(uint8_t left13, uint8_t left24, uint8_t right13, uint8_t right24, uint8_t pwm);
 	void forward(uint8_t speed);
-	void backward(uint8_t, speed);
+	void backward(uint8_t speed);
 	void off();
 private:
 	uint8_t _left13;
