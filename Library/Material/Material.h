@@ -21,6 +21,7 @@ private:
 	uint8_t _left24;
 	uint8_t _right13;
 	uint8_t _right24;
+	uint8_t _pwm;
 	uint8_t _speed;
 };
 
