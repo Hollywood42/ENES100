@@ -55,7 +55,7 @@ Turn::Turn(uint8_t left13, uint8_t left24, uint8_t right13, uint8_t right24, uin
 	pinMode(right13, OUTPUT);
 	pinMode(right24, OUTPUT);
 }
-void Turn::left(uint8_t seconds) {
+void Turn::left(int seconds) {
 	_sec = seconds;
 	digitalWrite(_left13, LOW);
 	digitalWrite(_left24, HIGH);
@@ -68,7 +68,7 @@ void Turn::left(uint8_t seconds) {
 	digitalWrite(_right24, LOW);
 }
 
-void Turn::right(uint8_t seconds) {
+void Turn::right(int seconds) {
 	_sec = seconds;
 	digitalWrite(_left13, HIGH);
 	digitalWrite(_left24, LOW);
@@ -82,7 +82,7 @@ void Turn::right(uint8_t seconds) {
 }
 
 void Turn::left90() {
-	_sec = 3;
+	_sec = 2000;
 	digitalWrite(_left13, LOW);
 	digitalWrite(_left24, HIGH);
 	digitalWrite(_right13, HIGH);
@@ -95,7 +95,7 @@ void Turn::left90() {
 }
 
 void Turn::right90() {
-	_sec = 3;
+	_sec = 2000;
 	digitalWrite(_left13, HIGH);
 	digitalWrite(_left24, LOW);
 	digitalWrite(_right13, LOW);
