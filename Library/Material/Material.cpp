@@ -55,8 +55,10 @@ Turn::Turn(uint8_t left13, uint8_t left24, uint8_t right13, uint8_t right24, uin
 	pinMode(right13, OUTPUT);
 	pinMode(right24, OUTPUT);
 }
-void Turn::left(int seconds) {
+void Turn::right(int seconds, uint8_t speed) {
 	_sec = seconds;
+	_speed = speed;
+	analogWrite(_pwm, _speed);
 	digitalWrite(_left13, LOW);
 	digitalWrite(_left24, HIGH);
 	digitalWrite(_right13, HIGH);
@@ -68,8 +70,10 @@ void Turn::left(int seconds) {
 	digitalWrite(_right24, LOW);
 }
 
-void Turn::right(int seconds) {
+void Turn::left(int seconds, uint8_t speed) {
 	_sec = seconds;
+	_speed = speed;
+	analogWrite(_pwm, _speed);
 	digitalWrite(_left13, HIGH);
 	digitalWrite(_left24, LOW);
 	digitalWrite(_right13, LOW);
@@ -81,8 +85,10 @@ void Turn::right(int seconds) {
 	digitalWrite(_right24, LOW);
 }
 
-void Turn::left90() {
+void Turn::right90(uint8_t speed) {
 	_sec = 2000;
+	_speed = speed;
+	analogWrite(_pwm, _speed);
 	digitalWrite(_left13, LOW);
 	digitalWrite(_left24, HIGH);
 	digitalWrite(_right13, HIGH);
@@ -94,8 +100,10 @@ void Turn::left90() {
 	digitalWrite(_right24, LOW);
 }
 
-void Turn::right90() {
+void Turn::left90(uint8_t speed) {
 	_sec = 2000;
+	_speed = speed;
+	analogWrite(_pwm, _speed);
 	digitalWrite(_left13, HIGH);
 	digitalWrite(_left24, LOW);
 	digitalWrite(_right13, LOW);

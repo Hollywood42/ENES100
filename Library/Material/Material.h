@@ -28,10 +28,10 @@ private:
 class Turn {
 public:
 	Turn(uint8_t left13, uint8_t left24, uint8_t right13, uint8_t right24, uint8_t pwm);
-	void left(int seconds);
-	void right(int seconds);
-	void left90();
-	void right90();
+	void left(int seconds, uint8_t speed);
+	void right(int seconds, uint8_t speed);
+	void left90(uint8_t speed);
+	void right90(uint8_t speed);
 	void off();
 private:
 	uint8_t _left13;
@@ -39,6 +39,7 @@ private:
 	uint8_t _right13;
 	uint8_t _right24;
 	int _sec;
+	uint8_t _speed;
 };
 
 class Dis {
