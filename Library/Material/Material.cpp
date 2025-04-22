@@ -50,6 +50,7 @@ Turn::Turn(uint8_t left13, uint8_t left24, uint8_t right13, uint8_t right24, uin
 	_left24 = left24;
 	_right13 = right13;
 	_right24 = right24;
+	_pwm = pwm;
 	pinMode(left13, OUTPUT);
 	pinMode(left24, OUTPUT);
 	pinMode(right13, OUTPUT);
